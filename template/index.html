@@ -15,15 +15,14 @@
 			margin         : 0;
 			font-size      : 15px; }
 		
-		body, input {
-			font           : 15px Helvetica, arial, freesans, clean, sans-serif; }
+		body,
+		input { font           : 15px Helvetica, arial, freesans, clean, sans-serif }
 		
 		a {
 			color          : rgb(26,96,237);
 			text-decoration: none; }
 		
-		a:hover {
-			text-decoration: underline; }
+		a:hover { text-decoration: underline }
 		
 		code {
 			white-space     : nowrap;
@@ -42,7 +41,7 @@
 			overflow        : auto;
 			padding         : 6px 10px;
 			border-radius   : 3px; }
-			
+		
 			pre code {
 				white-space     : pre-wrap;
 				margin          : 0;
@@ -50,34 +49,115 @@
 				background-color: transparent;
 				border          : none; }
 		
+			pre .comment,
+			pre .template_comment,
+			pre .diff .header,
+			pre .javadoc {
+				color: #998;
+				font-style: italic; }
+		
+			pre .keyword,
+			pre .css .rule .keyword,
+			pre .winutils,
+			pre .javascript .title,
+			pre .nginx .title,
+			pre .subst,
+			pre .request,
+			pre .status {
+				color: #333;
+				font-weight: bold; }
+		
+			pre .number,
+			pre .hexcolor,
+			pre .ruby .constant { color: #099 }
+		
+			pre .string,
+			pre .tag .value,
+			pre .phpdoc,
+			pre .tex .formula { color: #d14 }
+		
+			pre .title,
+			pre .id,
+			pre .coffeescript .params,
+			pre .scss .preprocessor {
+				color: #900;
+				font-weight: bold; }
+		
+			pre .javascript .title,
+			pre .lisp .title,
+			pre .clojure .title,
+			pre .subst { font-weight: normal }
+		
+			pre .class .title,
+			pre .haskell .type,
+			pre .vhdl .literal,
+			pre .tex .command {
+				color: #458;
+				font-weight: bold; }
+		
+			pre .tag,
+			pre .tag .title,
+			pre .rules .property,
+			pre .django .tag .keyword {
+				color: #000080;
+				font-weight: normal; }
+		
+			pre .attribute,
+			pre .variable,
+			pre .lisp .body { color: #008080 }
+		
+			pre .regexp { color: #009926 }
+		
+			pre .class {
+				color: #458;
+				font-weight: bold; }
+		
+			pre .symbol,
+			pre .ruby .symbol .string,
+			pre .lisp .keyword,
+			pre .tex .special,
+			pre .prompt { color: #990073 }
+		
+			pre .built_in,
+			pre .lisp .title,
+			pre .clojure .built_in { color: #0086b3 }
+		
+			pre .preprocessor,
+			pre .pi,
+			pre .doctype,
+			pre .shebang,
+			pre .cdata {
+				color: #999;
+				font-weight: bold; }
+		
+			pre .deletion { background: #fdd }
+		
+			pre .addition { background: #dfd }
+		
+			pre .diff .change { background: #0086b3 }
+		
+			pre .chunk { color: #aaa }
+		
 		hr {
 			border    : 0;
 			border-top: 2px solid #ccc;
 			margin    : 20px 0; }
 		
-		.object-Number {
-			color: #e5171f; }
+		.object-Number { color: #e5171f }
 		
-		.object-String {
-			color: #0079c2; }
+		.object-String { color: #0079c2 }
 		
-		.object-Element {
-			color: purple; }
+		.object-Element { color: purple }
 		
-		.object-Array {
-			color: purple; }
+		.object-Array { color: purple }
 		
-		.object-Object {
-			color: orange; }
+		.object-Object { color: orange }
 		
-		.object-Boolean {
-			color: #009944; }
+		.object-Boolean { color: #009944 }
 		
-		.object-Function {
-			color: #bb641d; }
+		.object-Function { color: #bb641d }
 		
-		.object-null {
-			color: #bb641d; }
+		.object-null { color: #bb641d }
 		
 		ul.api-list {
 			list-style-type: none;
@@ -85,8 +165,7 @@
 		
 		div.headbar,
 		div.sidebar,
-		div.content {
-			position: absolute; }
+		div.content { position: absolute }
 		
 		div.headbar {
 			top       : 0;
@@ -94,7 +173,7 @@
 			left      : 0;
 			height    : 40px;
 			background: rgb(26,96,237); }
-			
+		
 			div.headbar > div {
 				position   : absolute;
 				top        : 0;
@@ -103,7 +182,7 @@
 				padding    : 5px 10px 5px;
 				line-height: 30px;
 				font-size  : 14px; }
-			
+		
 			div.headbar > h1 {
 				display    : block;
 				margin     : 0;
@@ -112,33 +191,30 @@
 				font-weight: normal;
 				line-height: 30px;
 				padding    : 5px 10px 5px; }
-				
-				div.headbar > * > a {
-					color          : white;
-					text-decoration: none; }
-				
-				div.headbar > * > a:hover {
-					text-decoration: underline; }
-				
+		
+			div.headbar > * > a {
+				color          : white;
+		
+				text-decoration: none; }
+		
+			div.headbar > * > a:hover { text-decoration: underline }
 		
 		div.sidebar {
 			top       : 40px;
 			bottom    : 0;
 			left      : 0;
 			width     : 200px; }
-			
+		
 			div.sidebar > div#search {
 				position  : absolute;
 				top       : 0;
 				right     : 0;
 				left      : 0;
 				height    : 32px;
-				
 				background: #ddd; }
-				
-				div.sidebar > div#search > input {
-					width      : 180px; }
-			
+		
+				div.sidebar > div#search > input { width      : 180px }
+		
 			div.sidebar > div#api-list {
 				position  : absolute;
 				top       : 32px;
@@ -146,60 +222,54 @@
 				bottom    : 0;
 				left      : 0;
 				overflow-y: scroll; }
-				
-				div.sidebar > div#api-list > ul.api-list {
-					font-size: 14px; }
-					
-					div.sidebar > div#api-list > ul.api-list li {
-						 }
-					
-					div.sidebar > div#api-list > ul.api-list li > ul {
-						list-style-type: none;
-						padding-left   : 0; }
-					
-					div.sidebar > div#api-list > ul.api-list li.collapse > ul {
-						display: none; }
-					
-					div.sidebar > div#api-list > ul.api-list li.show > ul {
-						display: block !important; }
-						
-						div.sidebar > div#api-list > ul.api-list li > a {
-							display        : block;
-							padding        : 5px 10px;
-							color          : #555;
-							word-break     : break-all; }
-							
-							div.sidebar > div#api-list > ul.api-list li > ul > li > a {
-								padding-left: 20px; }
-						
-						div.sidebar > div#api-list > ul.api-list li > a:hover {
-							text-decoration: none;
-							color          : #000;
-							background     : rgba(26,96,237,0.1);
-							box-shadow     : inset 0 1px 0 rgba(26,96,237,0.4), inset 0 -1px 0 rgba(26,96,237,0.4); }
-						
-						div.sidebar > div#api-list > ul.api-list li.selected > a {
-							background     : rgba(26,96,237,0.1); }
-						
-						div.sidebar > div#api-list > ul.api-list li.type-class > a:before {
-							content     : '\25c6';
-							margin-right: 5px;
-							color       : #019a66; }
-						
-						div.sidebar > div#api-list > ul.api-list li.type-constructor > a:before {
-							content     : '\271C';
-							margin-right: 5px;
-							color       : #f39700; }
-						
-						div.sidebar > div#api-list > ul.api-list li.type-instance-method > a:before {
-							content     : '\25cf';
-							margin-right: 5px;
-							color       : #a9cc51; }
-						
-						div.sidebar > div#api-list > ul.api-list li.type-class-method > a:before {
-							content     : '\25cf';
-							margin-right: 5px;
-							color       : #9b7cb6; }
+		
+				div.sidebar > div#api-list > ul.api-list { font-size: 14px }
+		
+					div.sidebar > div#api-list > ul.api-list li { }
+		
+						div.sidebar > div#api-list > ul.api-list li > ul {
+							list-style-type: none;
+							padding-left   : 0; }
+		
+					div.sidebar > div#api-list > ul.api-list li.collapse > ul { display: none }
+		
+					div.sidebar > div#api-list > ul.api-list li.show > ul { display: block !important }
+		
+					div.sidebar > div#api-list > ul.api-list li > a {
+						display        : block;
+						padding        : 5px 10px;
+						color          : #555;
+						word-break     : break-all; }
+		
+					div.sidebar > div#api-list > ul.api-list li > ul > li > a { padding-left: 20px }
+		
+					div.sidebar > div#api-list > ul.api-list li > a:hover {
+						text-decoration: none;
+						color          : #000;
+						background     : rgba(26,96,237,0.1);
+						box-shadow     : inset 0 1px 0 rgba(26,96,237,0.4), inset 0 -1px 0 rgba(26,96,237,0.4); }
+		
+					div.sidebar > div#api-list > ul.api-list li.selected > a { background     : rgba(26,96,237,0.1) }
+		
+					div.sidebar > div#api-list > ul.api-list li.type-class > a:before {
+						content     : '\25c6';
+						margin-right: 5px;
+						color       : #019a66; }
+		
+					div.sidebar > div#api-list > ul.api-list li.type-constructor > a:before {
+						content     : '\271C';
+						margin-right: 5px;
+						color       : #f39700; }
+		
+					div.sidebar > div#api-list > ul.api-list li.type-instance-method > a:before {
+						content     : '\25cf';
+						margin-right: 5px;
+						color       : #a9cc51; }
+		
+					div.sidebar > div#api-list > ul.api-list li.type-class-method > a:before {
+						content     : '\25cf';
+						margin-right: 5px;
+						color       : #9b7cb6; }
 		
 		div.content {
 			top       : 40px;
@@ -208,53 +278,50 @@
 			left      : 200px;
 			padding   : 30px 80px;
 			overflow-y: scroll; }
-			
+		
 			div.content > ul.breadcrumbs {
 				margin         : 0 0 20px;
 				padding        : 0;
 				list-style-type: none;
 				height         : 15px;
 				font-size      : 13px; }
-				
+		
 				div.content > ul.breadcrumbs > li {
 					float         : left;
 					margin        : 0 5px 0 0; }
-				
+		
 				div.content > ul.breadcrumbs > li:before {
 					content     : '\2192';
 					margin-right: 5px;
 					color       : #aaa; }
-				
+		
 				div.content > ul.breadcrumbs > li:first-child:before {
 					content     : '';
 					margin-right: 0; }
-			
-				div.content > div.title > small {
-					text-transform: uppercase;
-					font-size     : 14px;
-					font-weight   : bold;
-					color         : #aaa; }
-				
-				div.content > div.title > h2 {
-					margin        : 5px 0; }
-			
-			div.content > div.syntax > pre {
-				margin-bottom: 5px; }
-			
-			div.content > div.syntax > pre > code.ebnf > .alias {
-				color: #bbb; }
-			
+		
+			div.content > div.title > small {
+				text-transform: uppercase;
+				font-size     : 14px;
+				font-weight   : bold;
+				color         : #aaa; }
+		
+			div.content > div.title > h2 { margin        : 5px 0 }
+		
+			div.content > div.syntax > pre { margin-bottom: 5px }
+		
+				div.content > div.syntax > pre > code.ebnf > .alias { color: #bbb }
+		
 			div.content > div.syntax > ul.arguments,
 			div.content > div.description > ul {
 				font-size  : 12px;
 				line-height: 22px;
 				padding    : 0 20px;
 				margin-top : 10px; }
-			
+		
 			div.content > div.source-link {
 				margin        : 0 0 10px;
 				font-size     : 11px; }
-			
+		
 			div.content ul.api-list li {
 				float          : left;
 				margin         : 0 5px 3px 0;
@@ -265,12 +332,11 @@
 				border-radius  : 3px;
 				padding        : 0 3px;
 				font-size      : 13px; }
-			
-			div.content ul.api-list li > ul {
-				display: none; }
-			
+		
+				div.content ul.api-list li > ul { display: none }
+		
 			div.content > div.description { }
-			
+		
 			div.content > div.footer {
 				clear      : both;
 				margin-top : 20px;
