@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>[[title]] - [[product]] API Documentation</title>
+	<meta name="robots" content="noarchive">
+	<meta name="generator" content="flagdoc">
+	<script type="text/javascript" src="https://flagrate.org/flagrate.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://flagrate.org/flagrate.min.css">
+	<style type="text/css">
+		body {
+			background     : #fff;
+			padding        : 0;
+			margin         : 0;
+			font-size      : 15px; }
+		
+		body, input {
+			font           : 15px Helvetica, arial, freesans, clean, sans-serif; }
+		
+		a {
+			color          : rgb(26,96,237);
+			text-decoration: none; }
+		
+		a:hover {
+			text-decoration: underline; }
+		
+		code {
+			white-space     : nowrap;
+			margin          : 0 2px;
+			padding         : 0px 5px;
+			border          : 1px solid #ddd;
+			background-color: #f8f8f8;
+			border-radius   : 3px;
+			font-family     : "Panic Sans", "Bitstream Vera Sans Mono", Monaco, Consolas, Andale Mono, monospace; }
+		
+		pre {
+			background-color: #f8f8f8;
+			border          : 1px solid #ddd;
+			font-size       : 13px;
+			line-height     : 19px;
+			overflow        : auto;
+			padding         : 6px 10px;
+			border-radius   : 3px; }
+			
+			pre code {
+				white-space     : pre-wrap;
+				margin          : 0;
+				padding         : 0;
+				background-color: transparent;
+				border          : none; }
+		
+		hr {
+			border    : 0;
+			border-top: 2px solid #ccc;
+			margin    : 20px 0; }
+		
+		.object-Number {
+			color: #e5171f; }
+		
+		.object-String {
+			color: #0079c2; }
+		
+		.object-Element {
+			color: purple; }
+		
+		.object-Array {
+			color: purple; }
+		
+		.object-Object {
+			color: orange; }
+		
+		.object-Boolean {
+			color: #009944; }
+		
+		.object-Function {
+			color: #bb641d; }
+		
+		.object-null {
+			color: #bb641d; }
+		
+		ul.api-list {
+			list-style-type: none;
+			padding-left   : 0; }
+		
+		div.headbar,
+		div.sidebar,
+		div.content {
+			position: absolute; }
+		
+		div.headbar {
+			top       : 0;
+			right     : 0;
+			left      : 0;
+			height    : 40px;
+			background: rgb(26,96,237); }
+			
+			div.headbar > div {
+				position   : absolute;
+				top        : 0;
+				right      : 0;
+				bottom     : 0;
+				padding    : 5px 10px 5px;
+				line-height: 30px;
+				font-size  : 14px; }
+			
+			div.headbar > h1 {
+				display    : block;
+				margin     : 0;
+				padding    : 0;
+				font-size  : 18px;
+				font-weight: normal;
+				line-height: 30px;
+				padding    : 5px 10px 5px; }
+				
+				div.headbar > * > a {
+					color          : white;
+					text-decoration: none; }
+				
+				div.headbar > * > a:hover {
+					text-decoration: underline; }
+				
+		
+		div.sidebar {
+			top       : 40px;
+			bottom    : 0;
+			left      : 0;
+			width     : 200px; }
+			
+			div.sidebar > div#search {
+				position  : absolute;
+				top       : 0;
+				right     : 0;
+				left      : 0;
+				height    : 30px;
+				
+				background: #ddd; }
+			
+			div.sidebar > div#api-list {
+				position  : absolute;
+				top       : 30px;
+				right     : 0;
+				bottom    : 0;
+				left      : 0;
+				overflow-y: scroll; }
+				
+				div.sidebar > div#api-list > ul.api-list {
+					font-size: 14px; }
+					
+					div.sidebar > div#api-list > ul.api-list li {
+						 }
+					
+					div.sidebar > div#api-list > ul.api-list li > ul {
+						list-style-type: none;
+						padding-left   : 0; }
+						
+						div.sidebar > div#api-list > ul.api-list li > a {
+							display        : block;
+							padding        : 5px 10px;
+							color          : #555;
+							word-break     : break-all; }
+							
+							div.sidebar > div#api-list > ul.api-list li > ul > li > a {
+								padding-left: 20px; }
+						
+						div.sidebar > div#api-list > ul.api-list li > a:hover {
+							text-decoration: none;
+							color          : #000;
+							background     : rgba(26,96,237,0.1);
+							box-shadow     : inset 0 1px 0 rgba(26,96,237,0.4), inset 0 -1px 0 rgba(26,96,237,0.4); }
+						
+						div.sidebar > div#api-list > ul.api-list li.type-class > a:before {
+							content     : '\25c6';
+							margin-right: 5px;
+							color       : #019a66; }
+						
+						div.sidebar > div#api-list > ul.api-list li.type-constructor > a:before {
+							content     : '\271C';
+							margin-right: 5px;
+							color       : #f39700; }
+						
+						div.sidebar > div#api-list > ul.api-list li.type-instance-method > a:before {
+							content     : '\25cf';
+							margin-right: 5px;
+							color       : #a9cc51; }
+						
+						div.sidebar > div#api-list > ul.api-list li.type-class-method > a:before {
+							content     : '\25cf';
+							margin-right: 5px;
+							color       : #9b7cb6; }
+		
+		div.content {
+			top       : 40px;
+			right     : 0;
+			bottom    : 0;
+			left      : 200px;
+			padding   : 30px 80px;
+			overflow-y: scroll; }
+			
+			div.content > ul.breadcrumbs {
+				margin : 0 0 20px;
+				padding: 0; }
+			
+				div.content > div.title > small {
+					text-transform: uppercase;
+					font-size     : 14px;
+					font-weight   : bold;
+					color         : #aaa; }
+				
+				div.content > div.title > h2 {
+					margin        : 5px 0; }
+			
+			div.content > div.syntax > pre {
+				margin-bottom: 5px; }
+			
+			div.content > div.syntax > pre > code.ebnf > .alias {
+				color: #bbb; }
+			
+			div.content > div.syntax > ul.arguments,
+			div.content > div.description > ul {
+				font-size  : 12px;
+				line-height: 22px;
+				padding    : 0 20px;
+				margin-top : 10px; }
+			
+			div.content > div.source-link {
+				margin        : 0 0 10px;
+				font-size     : 11px; }
+			
+			div.content ul.api-list li {
+				float          : left;
+				margin         : 0 5px 3px 0;
+				list-style-type: none;
+				padding-bottom : 0;
+				background     : #f0f0f0;
+				border         : 1px solid #ccc;
+				border-radius  : 3px;
+				padding        : 0 3px;
+				font-size      : 13px; }
+			
+			div.content ul.api-list li > ul {
+				display: none; }
+	</style>
+</head>
+<body>
+	<div class="headbar">
+		<h1><a href="./"><strong>[[product]]</strong> API Documentation</a></h1>
+		<div class="right">
+			<a href="/">Home &#x25b2;</a>
+		</div>
+	</div>
+	
+	<div class="sidebar">
+		<div id="search"></div>
+		<div id="api-list">{{apiList}}</div>
+	</div>
+	
+	<div class="content">
+		<ul class="breadcrumbs">
+			{{breadcrumbs}}
+		</ul>
+		
+		<div class="title">
+			<small>[[type]]</small>
+			<h2>[[title]]</h2>
+		</div>
+		
+		<div class="source-link">
+			<a href="[[sourceLink]]">View source: [[sourceName]]#[[sourceLine]] &rarr;</a>
+		</div>
+		
+		<div class="syntax">
+			<pre><code class="ebnf">{{ebnf}}</code></pre>
+			<ul class="arguments">
+				{{arguments}}
+			</ul>
+		</div>
+		
+		<div class="description">
+			{{description}}
+		</div>
+	</div>
+	<script type="text/javascript">
+		var ebnf = document.getElementsByClassName('ebnf')[0];
+		if (ebnf.innerHTML === '') document.getElementsByClassName('syntax')[0].style.display = 'none';
+	</script>
+</body>
+</html>
