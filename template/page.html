@@ -153,6 +153,9 @@
 					div.sidebar > div#api-list > ul.api-list li > ul {
 						list-style-type: none;
 						padding-left   : 0; }
+					
+					div.sidebar > div#api-list > ul.api-list li.collapse > ul {
+						display: none; }
 						
 						div.sidebar > div#api-list > ul.api-list li > a {
 							display        : block;
@@ -168,6 +171,9 @@
 							color          : #000;
 							background     : rgba(26,96,237,0.1);
 							box-shadow     : inset 0 1px 0 rgba(26,96,237,0.4), inset 0 -1px 0 rgba(26,96,237,0.4); }
+						
+						div.sidebar > div#api-list > ul.api-list li.selected > a {
+							background     : rgba(26,96,237,0.1); }
 						
 						div.sidebar > div#api-list > ul.api-list li.type-class > a:before {
 							content     : '\25c6';
@@ -312,6 +318,29 @@
 	<script type="text/javascript">
 		var ebnf = document.getElementsByClassName('ebnf')[0];
 		if (ebnf.innerHTML === '') document.getElementsByClassName('syntax')[0].style.display = 'none';
+		
+		var classKey   = '[[classKey]]';
+		var currentKey = '[[currentKey]]';
+		
+		var apiList = document.getElementById('api-list');
+		var li      = apiList.firstChild.getElementsByClassName('type-class');
+		
+		for (var i = 0, l = li.length; i < l; i++) {
+			if (li[i].dataset.key === classKey) {
+				flagrate.Element.addClassName(li[i], 'selected');
+				flagrate.Element.insert(apiList.firstChild, { top: li[i] });
+			} else {
+				flagrate.Element.addClassName(li[i], 'collapse');
+			}
+		}
+		
+		li = apiList.firstChild.getElementsByTagName('li');
+		
+		for (i = 0, l = li.length; i < l; i++) {
+			if (li[i].dataset.key === currentKey) {
+				flagrate.Element.addClassName(li[i], 'selected');
+			}
+		}
 	</script>
 </body>
 </html>
