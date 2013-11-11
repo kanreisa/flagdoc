@@ -172,7 +172,7 @@
 			right     : 0;
 			left      : 0;
 			height    : 40px;
-			background: rgb(26,96,237); }
+			background: #388dd6; }
 		
 			div.headbar > div {
 				position   : absolute;
@@ -213,7 +213,7 @@
 				height    : 32px;
 				background: #ddd; }
 		
-				div.sidebar > div#search > input { width      : 180px }
+				div.sidebar > div#search > input { width: 180px }
 		
 			div.sidebar > div#api-list {
 				position  : absolute;
@@ -276,6 +276,11 @@
 						margin-right: 5px;
 						color       : #9b7cb6; }
 		
+					div.sidebar > div#api-list > ul.api-list li.type-class-property > a:before {
+						content     : '\0070';
+						margin-right: 5px;
+						color       : #9b7cb6; }
+		
 		div.content {
 			top       : 40px;
 			right     : 0;
@@ -310,7 +315,7 @@
 				font-weight   : bold;
 				color         : #aaa; }
 		
-			div.content > div.title > h2 { margin        : 5px 0 }
+			div.content > div.title > h2 { margin: 5px 0 }
 		
 			div.content > div.syntax > pre { margin-bottom: 5px }
 		
@@ -425,7 +430,8 @@
 		}
 		
 		var searchInput = flagrate.createTextInput({
-			placeholder: 'Search'
+			placeholder: 'Search',
+			value: window.sessionStorage.getItem('search-value')
 		}).insertTo(document.getElementById('search'));
 		
 		var search = function(e) {
@@ -452,7 +458,13 @@
 			}
 		};
 		
-		searchInput.addEventListener('keyup', search)
+		var save = function(e) {
+			
+			window.sessionStorage.setItem('search-value', e.target.value || '');
+		};
+		
+		searchInput.addEventListener('keyup', search);
+		searchInput.addEventListener('blur', save);
 	</script>
 </body>
 </html>
